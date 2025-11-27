@@ -71,10 +71,10 @@ gitGraph
 We prioritize fast, reliable unit tests over slow, flaky E2E tests.
 
 ```mermaid
-pyramid
-    "E2E Tests (10%)"
-    "Integration Tests (20%)"
-    "Unit Tests (70%)"
+pie title Test Pyramid Distribution
+    "Unit Tests" : 70
+    "Integration Tests" : 20
+    "E2E Tests" : 10
 ```
 
 ### FIRST Principles
