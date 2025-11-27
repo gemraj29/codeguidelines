@@ -61,15 +61,15 @@ We follow a trunk-based development workflow with short-lived feature branches.
 gitGraph
     commit
     commit
-    branch feature/login
-    checkout feature/login
+    branch "feature/login"
+    checkout "feature/login"
     commit
     commit
     checkout main
-    merge feature/login
+    merge "feature/login"
     commit
-    branch feature/payment
-    checkout feature/payment
+    branch "feature/payment"
+    checkout "feature/payment"
     commit
 ```
 
