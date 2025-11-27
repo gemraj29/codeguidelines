@@ -184,10 +184,18 @@ stateDiagram-v2
     *   **Lockfiles**: Always commit `package-lock.json` / `yarn.lock`.
     *   **SBOM**: Generate a Software Bill of Materials for every build.
     *   **Updates**: Use automated tools (Renovate, Dependabot) to patch vulnerabilities.
+*   **Security Headers**:
+    *   Use `HSTS` to enforce HTTPS.
+    *   Use `X-Frame-Options: DENY` to prevent clickjacking.
+    *   Use `Content-Security-Policy` (CSP) to mitigate XSS.
 
 ## 8. Language-Specific Best Practices
 
 ### JavaScript / TypeScript
+*   **Strict Mode**: Always use strict mode (default in modules).
+*   **Async/Await**: Always use `try/catch` or `.catch()` for error handling.
+*   **Validation**: Use Zod or similar libraries for runtime validation.
+
 **❌ Don't:**
 ```typescript
 const user: any = JSON.parse(data);
@@ -196,11 +204,27 @@ console.log(user.name); // Runtime error risk
 
 **✅ Do:**
 ```typescript
-interface User { name: string; }
-const user = JSON.parse(data) as User; // Better, but validation is best (Zod)
+import { z } from 'zod';
+
+const UserSchema = z.object({
+  name: z.string(),
+});
+
+const user = UserSchema.parse(JSON.parse(data)); // Safe and typed
 ```
 
 ### React
+*   **Hooks**:
+    *   Use custom hooks to extract logic from components.
+    *   Follow the "Rules of Hooks" (top level only).
+*   **Performance**:
+    *   Use `useMemo` for expensive calculations.
+    *   Use `useCallback` for functions passed to memoized children.
+*   **Accessibility**:
+    *   Use semantic HTML (`<button>`, not `<div onClick>`).
+    *   Ensure all images have `alt` text.
+    *   Use `aria-label` where visual context is missing.
+
 **❌ Don't:**
 ```jsx
 // Prop drilling 4 levels deep
@@ -391,4 +415,3 @@ This document is not static. It is a **Living Document**.
 *   **Exception Policy**: If a guideline blocks progress, document the exception in an ADR and proceed.
 
 > "The best processes are the ones that serve the team, not the other way around."
-
