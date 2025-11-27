@@ -37,6 +37,21 @@ function getBoolean(value) {
 const getBoolean = (value) => !!value;
 ```
 
+### Code Readability
+*   **Naming**: Variables should be nouns (`user`), functions verbs (`getUser`).
+*   **Comments**: Explain *why*, not *what*. Code tells you how.
+*   **Formatting**: Use Prettier/Black. Consistent spacing is non-negotiable.
+
+### Algorithms & Complexity
+*   **Big O Matters**: Know the cost of your code.
+    *   **O(1)**: Map lookup (Preferred).
+    *   **O(n)**: Loop (Acceptable).
+    *   **O(n^2)**: Nested loop (Avoid for large datasets).
+*   **Data Structures**:
+    *   Use **Maps/Sets** for O(1) lookups.
+    *   Use **Arrays** for ordered lists.
+    *   Avoid Linked Lists unless implementing specific low-level structures.
+
 ## 2. Engineering Culture & Process
 
 ### Git Flow & CI/CD
