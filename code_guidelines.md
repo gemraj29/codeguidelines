@@ -58,19 +58,19 @@ const getBoolean = (value) => !!value;
 We follow a trunk-based development workflow with short-lived feature branches.
 
 ```mermaid
-gitGraph:
-commit
-commit
-branch feature-login
-checkout feature-login
-commit
-commit
-checkout main
-merge feature-login
-commit
-branch feature-payment
-checkout feature-payment
-commit
+gitGraph
+    commit
+    commit
+    branch "feature/login"
+    checkout "feature/login"
+    commit
+    commit
+    checkout main
+    merge "feature/login"
+    commit
+    branch "feature/payment"
+    checkout "feature/payment"
+    commit
 ```
 
 *   **Code Review (LGTM)**:
@@ -87,9 +87,9 @@ We prioritize fast, reliable unit tests over slow, flaky E2E tests.
 
 ```mermaid
 pie title Test Pyramid Distribution
-"Unit Tests" : 70
-"Integration Tests" : 20
-"E2E Tests" : 10
+    "Unit Tests" : 70
+    "Integration Tests" : 20
+    "E2E Tests" : 10
 ```
 
 ### FIRST Principles
@@ -125,11 +125,11 @@ pie title Test Pyramid Distribution
 
 ```mermaid
 stateDiagram-v2
-[*] --> Closed
-Closed --> Open : Failure Threshold Reached
-Open --> HalfOpen : Timeout Expired
-HalfOpen --> Closed : Success
-HalfOpen --> Open : Failure
+    [*] --> Closed
+    Closed --> Open : Failure Threshold Reached
+    Open --> HalfOpen : Timeout Expired
+    HalfOpen --> Closed : Success
+    HalfOpen --> Open : Failure
 ```
 
 ### Observability & Scalability
