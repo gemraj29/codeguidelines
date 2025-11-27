@@ -58,7 +58,7 @@ const getBoolean = (value) => !!value;
 We follow a trunk-based development workflow with short-lived feature branches.
 
 ```mermaid
-gitGraph
+gitGraph:
 commit
 commit
 branch feature-login
@@ -345,6 +345,7 @@ Treat documentation with the same rigor as software.
 *   **Review**: Docs changes require PRs and review.
 *   **Testing**: Check for broken links and spelling in CI.
 *   **Tools**: Markdown, Mermaid, Docusaurus/MkDocs.
+*   **Reference**: [Creating diagrams on GitHub](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams)
 
 ## 15. Cloud Native Development
 
