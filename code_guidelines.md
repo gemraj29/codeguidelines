@@ -14,6 +14,11 @@ These universal principles apply across all languages and stacks.
 *   **ISP (Interface Segregation)**: Clients should not depend on unused interfaces.
 *   **DIP (Dependency Inversion)**: Depend on abstractions, not concretions.
 
+### Clean Architecture
+*   **Dependency Flow**: UI/API → Services → Domain → Infrastructure.
+*   **Business Logic**: Keep business logic OUT of controllers, routes, and UI components. Put it in Services or Domain layers.
+*   **Separation of Concerns**: Each layer should have a distinct responsibility.
+
 ### DRY (Don't Repeat Yourself)
 > [!TIP]
 > DRY is about knowledge duplication, not just code duplication. Two lines of code can look identical but represent different business rules.
@@ -79,6 +84,8 @@ gitGraph
 *   **DevSecOps**:
     *   > [!WARNING]
     *   > Never commit secrets. Use tools like `trufflehog` in pre-commit hooks.
+*   **No Placeholders**: Avoid placeholder/TODO implementations for core logic. Define clear interfaces and realistic examples instead.
+*   **Self-Review**: Self-review your output for correctness, complexity, and security before presenting final code.
 
 ## 3. Testing Strategy & Principles
 

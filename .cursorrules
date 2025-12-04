@@ -6,6 +6,7 @@ Always follow these core principles:
 2.  **KISS**: Keep it simple. Avoid over-engineering.
 3.  **Security First**: Never commit secrets. Validate all inputs. Use strict security headers.
 4.  **Modern Stack**: Use the latest stable features of the language/framework (e.g., React Hooks, ES6+, Python Type Hints).
+5.  **Clean Architecture**: Follow UI/API -> Services -> Domain -> Infra. Keep business logic out of UI/Controllers.
 
 ## Language-Specific Instructions
 
@@ -38,6 +39,8 @@ Always follow these core principles:
 ## General Workflow
 -   **Step-by-Step**: specific complex tasks into smaller steps.
 -   **Explain Why**: Briefly explain the rationale behind your code choices (e.g., "Using a Set here for O(1) lookup").
--   **Review**: Before outputting code, review it against these rules.
+-   **Complexity**: Consider time/space complexity. Aim for O(n) or O(n log n).
+-   **No Placeholders**: Avoid placeholder/TODO implementations for core logic.
+-   **Review**: Before outputting code, self-review for correctness, complexity, security, and missing tests.
 
 Refer to `code_guidelines.md` for the complete set of standards.

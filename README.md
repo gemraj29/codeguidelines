@@ -6,6 +6,8 @@ This repository contains the definitive source of truth for our engineering stan
 
 *   **[code_guidelines.md](code_guidelines.md)**: The comprehensive guide covering everything from SOLID principles to Cloud Native development.
 *   **[.cursorrules](.cursorrules)**: A copy of the guidelines formatted for AI assistants (Cursor, Copilot) to ensure generated code follows our standards.
+*   **[ai-software-quality-prompts-full](ai-software-quality-prompts-full/)**: A collection of comprehensive prompts for ensuring software quality and architecture.
+*   **[fastapi-react-ml-template-full](fastapi-react-ml-template-full/)**: A full-stack template project featuring FastAPI, React, and ML pipelines.
 
 ## 🚀 How to Use
 
